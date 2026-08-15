@@ -1,0 +1,19 @@
+{
+  "metrics":[{"label":"Automated cases","value":"1,842","detail":"64.8% eligible coverage"},{"label":"SandsARC cases","value":"1,216","detail":"+184 this quarter"},{"label":"UFT remaining","value":"626","detail":"34.0% of automation"},{"label":"Framework pass rate","value":"96.4%","detail":"First-run 93.8%"}],
+  "migration":{"total":982,"notStarted":118,"planned":96,"inProgress":142,"migrated":126,"validated":374,"retired":126,"completion":63.7},
+  "byApplication":[
+    {"application":"Guest Experience Platform","team":"MBS","uft":42,"cucumber":238,"testng":64,"validated":86,"target":"Sep 2026"},
+    {"application":"Loyalty & Rewards","team":"MBS","uft":118,"cucumber":164,"testng":38,"validated":54,"target":"Nov 2026"},
+    {"application":"Payments Hub","team":"MBS","uft":36,"cucumber":82,"testng":206,"validated":91,"target":"Aug 2026"},
+    {"application":"Hotel Operations Suite","team":"MBS","uft":164,"cucumber":74,"testng":22,"validated":28,"target":"Jan 2027"},
+    {"application":"Retail Commerce Cloud","team":"SCL","uft":182,"cucumber":96,"testng":44,"validated":22,"target":"Feb 2027"},
+    {"application":"Data Exchange Gateway","team":"SCL","uft":84,"cucumber":48,"testng":118,"validated":46,"target":"Dec 2026"}
+  ],
+  "flakyTests":[
+    {"id":"ZEP-18422","name":"Guest profile language preference sync","application":"Guest Experience Platform","framework":"Cucumber","failureRate":18.4,"failures":14,"owner":"Vikram Shah","age":"6d"},
+    {"id":"ZEP-11604","name":"POS terminal reconnect after network loss","application":"Retail Commerce Cloud","framework":"UFT","failureRate":31.2,"failures":19,"owner":"Tessa Lam","age":"18d"},
+    {"id":"ZEP-15288","name":"Rewards batch tier downgrade","application":"Loyalty & Rewards","framework":"TestNG","failureRate":12.8,"failures":9,"owner":"Kiran Das","age":"4d"},
+    {"id":"ZEP-19412","name":"Hotel folio export in mixed currency","application":"Hotel Operations Suite","framework":"UFT","failureRate":22.7,"failures":10,"owner":"Ben Ho","age":"12d"}
+  ],
+  "trend":{"labels":["Mar","Apr","May","Jun","Jul","Aug"],"sandsarc":[712,804,876,982,1088,1216],"uft":[914,872,828,762,691,626]}
+}

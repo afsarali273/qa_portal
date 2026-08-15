@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Static concept for the Sands Central QA Portal" />
+    <title>Sands QA Central — Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="assets/theme.js"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page="overview">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Sands QA Central home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span><strong>SANDS</strong><small>QA CENTRAL</small></span>
+        </a>
+        <nav class="nav-list">
+          <p class="nav-label">Workspace</p>
+          <a class="nav-item active" href="index.html"><span><i data-lucide="layout-dashboard"></i></span> Overview</a>
+          <a class="nav-item" href="applications.html"><span><i data-lucide="panels-top-left"></i></span> Applications</a>
+          <a class="nav-item" href="coverage.html"><span><i data-lucide="chart-no-axes-column-increasing"></i></span> Coverage</a>
+          <a class="nav-item" href="operations.html"><span><i data-lucide="circle-play"></i></span> Test operations</a>
+          <p class="nav-label">Quality teams</p>
+          <a class="nav-item" href="manual-qa.html"><span><i data-lucide="clipboard-check"></i></span> Manual QA</a>
+          <a class="nav-item" href="automation.html"><span><i data-lucide="bot"></i></span> Automation</a>
+          <a class="nav-item" href="management.html"><span><i data-lucide="briefcase-business"></i></span> Management</a>
+          <p class="nav-label">System</p>
+          <a class="nav-item" href="integrations.html"><span><i data-lucide="plug-zap"></i></span> Integrations</a>
+          <a class="nav-item" href="help.html"><span><i data-lucide="circle-help"></i></span> Guide</a>
+        </nav>
+        <div class="sidebar-foot">
+          <div class="sync-dot"></div>
+          <div><strong>All systems connected</strong><small>Portfolio refreshed 15 Aug 2026 · 9:42 AM SGT</small></div>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button class="mobile-menu" aria-label="Open navigation"><i data-lucide="menu"></i></button>
+          <div class="searchbox"><i data-lucide="search" aria-hidden="true"></i><input type="search" placeholder="Search tests, applications, runs…" aria-label="Global search" /><kbd>⌘ K</kbd></div>
+          <div class="topbar-actions">
+            <button class="icon-button theme-toggle" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-icon theme-icon-moon"><i data-lucide="moon"></i></span><span class="theme-icon theme-icon-sun"><i data-lucide="sun"></i></span></button>
+            <button class="icon-button" aria-label="Notifications"><i data-lucide="bell"></i><span class="notification-dot"></span></button>
+            <div class="avatar">AA</div>
+            <div class="user-meta"><strong>Afsar Ali</strong><span>QA Platform</span></div>
+          </div>
+        </header>
+
+        <main id="main" class="main-content">
+          <section class="page-heading reveal">
+            <div>
+              <div class="eyebrow">SATURDAY, 15 AUGUST 2026</div>
+              <h1>Quality command center</h1>
+              <p>One view of test progress, automation health and delivery confidence across MBS and SCL.</p>
+            </div>
+            <div class="heading-actions">
+              <button class="button secondary"><i data-lucide="download"></i><span>Export report</span></button>
+              <a class="button primary" href="operations.html"><i data-lucide="play"></i><span>Run tests</span></a>
+            </div>
+          </section>
+
+          <section class="filter-bar reveal" aria-label="Dashboard filters">
+            <div class="filter-group"><label for="team-filter">Team</label><select id="team-filter"><option>All teams</option><option>MBS</option><option>SCL</option></select></div>
+            <div class="filter-group"><label for="period-filter">Period</label><select id="period-filter"><option>Last 30 days</option><option>Last 90 days</option><option>Year to date</option></select></div>
+            <div class="filter-group"><label for="app-filter">Application</label><select id="app-filter"><option>All applications</option></select></div>
+            <button class="filter-reset"><i data-lucide="rotate-ccw"></i>Reset filters</button>
+            <span class="data-freshness"><i></i> Data current as of 09:42 SGT</span>
+          </section>
+
+          <section id="metric-grid" class="metric-grid" aria-label="Key quality metrics"></section>
+
+          <section class="dashboard-grid">
+            <article class="card chart-card span-8 reveal">
+              <div class="card-head">
+                <div><span class="card-kicker">EXECUTION TREND</span><h2>Quality momentum</h2><p>Passed, failed and blocked tests across all applications</p></div>
+                <div class="segmented"><button class="active">Weekly</button><button>Monthly</button></div>
+              </div>
+              <div class="legend"><span><i class="legend-pass"></i>Passed</span><span><i class="legend-fail"></i>Failed</span><span><i class="legend-block"></i>Blocked</span></div>
+              <div class="line-chart-wrap"><canvas id="quality-chart" aria-label="Weekly test execution trend"></canvas></div>
+            </article>
+
+            <article class="card confidence-card span-4 reveal">
+              <div class="card-head"><div><span class="card-kicker">RELEASE CONFIDENCE</span><h2>Portfolio readiness</h2></div><button class="more-button" aria-label="More options"><i data-lucide="ellipsis"></i></button></div>
+              <div class="gauge" style="--value:82"><div><strong>82%</strong><span>Ready</span></div></div>
+              <div class="confidence-list">
+                <div><span><i class="status-dot success"></i>Ready</span><strong>8 apps</strong></div>
+                <div><span><i class="status-dot warning"></i>At risk</span><strong>3 apps</strong></div>
+                <div><span><i class="status-dot danger"></i>Blocked</span><strong>1 app</strong></div>
+              </div>
+              <a href="applications.html" class="text-link">View application readiness <span>→</span></a>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+    <div id="modal-root"></div>
+    <div id="toast-region" class="toast-region" aria-live="polite"></div>
+    <script type="module" src="assets/app.js"></script>
+  </body>
+</html>

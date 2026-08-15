@@ -1,0 +1,21 @@
+{
+  "briefing":{"title":"Quality is trending positively with two focus areas","summary":"Automation coverage reached 64.8% of the Zephyr manual-test baseline and 126 UFT tests were retired this month. Retail Commerce remains blocked by environment stability, while Loyalty needs test-data support before its 19 August regression target.","generated":"09:42 SGT","evidence":8},
+  "metrics":[{"label":"Portfolio progress","value":"82%","detail":"8 of 12 applications ready"},{"label":"QA effort this month","value":"3,486h","detail":"58% manual · 42% automation"},{"label":"Estimated hours avoided","value":"2,740h","detail":"Based on approved baselines"},{"label":"Migration completion","value":"63.7%","detail":"626 UFT cases remaining"}],
+  "teamProgress":[{"team":"MBS","readiness":82.7,"automation":69.2,"passRate":96.9,"blocked":8,"trend":5.2},{"team":"SCL","readiness":74.5,"automation":59.4,"passRate":94.8,"blocked":9,"trend":3.1}],
+  "effort":{"labels":["Manual execution","Test design","Automation development","UFT migration","Maintenance","Triage","Test data & environment"],"hours":[1012,482,594,386,338,294,380]},
+  "workload":[
+    {"name":"Chloe Ng","initials":"CN","team":"MBS Manual QA","application":"Loyalty & Rewards","open":8,"remaining":"44h","wip":3,"blocked":2,"availability":"High load","note":"Needs test-data support"},
+    {"name":"Harish Iyer","initials":"HI","team":"MBS Manual QA","application":"Guest Experience Platform","open":4,"remaining":"18h","wip":2,"blocked":0,"availability":"Balanced","note":"On track"},
+    {"name":"Mei Lin","initials":"ML","team":"SCL Manual QA","application":"Retail Commerce Cloud","open":9,"remaining":"51h","wip":4,"blocked":3,"availability":"Blocked","note":"Environment dependency"},
+    {"name":"Farah Aziz","initials":"FA","team":"SCL Manual QA","application":"Enterprise Finance Platform","open":3,"remaining":"12h","wip":1,"blocked":0,"availability":"Available","note":"Can support another cycle"},
+    {"name":"Vikram Shah","initials":"VS","team":"MBS Automation QA","application":"Guest Experience Platform","open":5,"remaining":"26h","wip":2,"blocked":0,"availability":"Balanced","note":"Flaky test triage"},
+    {"name":"Kiran Das","initials":"KD","team":"MBS Automation QA","application":"Loyalty & Rewards","open":7,"remaining":"39h","wip":3,"blocked":1,"availability":"High load","note":"Migration batch 18"},
+    {"name":"Tessa Lam","initials":"TL","team":"SCL Automation QA","application":"Retail Commerce Cloud","open":6,"remaining":"31h","wip":2,"blocked":2,"availability":"Blocked","note":"Runner and terminal issues"},
+    {"name":"Jon Tan","initials":"JT","team":"SCL Automation QA","application":"Compliance Services","open":2,"remaining":"9h","wip":1,"blocked":0,"availability":"Available","note":"Can support TestNG reviews"}
+  ],
+  "risks":[
+    {"application":"Retail Commerce Cloud","level":"Critical","reason":"SIT instability blocking 16 cases and UFT runs","owner":"Alicia Ho","target":"18 Aug"},
+    {"application":"Loyalty & Rewards","level":"High","reason":"Historical test accounts missing for tier scenarios","owner":"Daniel Koh","target":"17 Aug"},
+    {"application":"Hotel Operations Suite","level":"High","reason":"UFT suite duration exceeds release window","owner":"Marcus Lee","target":"22 Aug"}
+  ]
+}

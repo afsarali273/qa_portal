@@ -1,0 +1,15 @@
+{
+  "metrics": [
+    {"label":"Overall test coverage","value":"78.6%","trend":"↑ 4.2%","direction":"up","context":"vs previous 30 days","icon":"chart-no-axes-column-increasing","color":"#260552","tint":"#eee9f5"},
+    {"label":"Automation coverage","value":"64.8%","trend":"↑ 7.4%","direction":"up","context":"1,842 of 2,843 eligible cases","icon":"workflow","color":"#0085a1","tint":"#e5f5f7"},
+    {"label":"Tests passed","value":"12,486","trend":"↑ 3.8%","direction":"up","context":"96.4% final pass rate","icon":"circle-check-big","color":"#64a70b","tint":"#edf6df"},
+    {"label":"Open blockers","value":"17","trend":"↓ 5","direction":"up","context":"6 require cross-team support","icon":"triangle-alert","color":"#c25e03","tint":"#faecdf"}
+  ],
+  "applications":["Guest Experience Platform","Loyalty & Rewards","Payments Hub","Hotel Operations","Retail Commerce","Enterprise Finance","Compliance Services","Data Exchange"],
+  "executionTrend":{
+    "labels":["Jul 06","Jul 13","Jul 20","Jul 27","Aug 03","Aug 10"],
+    "passed":[1420,1585,1710,1840,2010,2184],
+    "failed":[112,98,126,105,91,82],
+    "blocked":[54,62,47,58,39,31]
+  }
+}

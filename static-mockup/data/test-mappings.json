@@ -1,0 +1,504 @@
+{
+  "source": "Zephyr",
+  "refreshedAt": "2026-08-15T09:42:00+08:00",
+  "description": "Read-only many-to-many traceability derived from automation-to-manual test links maintained in Zephyr",
+  "applications": [
+    {
+      "id": "APP-001",
+      "summary": {
+        "manualBaseline": 430,
+        "automatedManualCases": 344,
+        "manualOnly": 86,
+        "automationTests": 250,
+        "mappedAutomationTests": 241
+      },
+      "mappings": [
+        {
+          "automationId": "GXP-CUC-0142",
+          "name": "Guest completes mobile check-in",
+          "framework": "Cucumber",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-10421",
+            "ZEP-10422",
+            "ZEP-10427",
+            "ZEP-10431"
+          ],
+          "manualCount": 4,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "GXP-CUC-0288",
+          "name": "Guest updates profile preferences",
+          "framework": "Cucumber",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-10812",
+            "ZEP-10814",
+            "ZEP-10818"
+          ],
+          "manualCount": 3,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "GXP-TNG-0064",
+          "name": "Reservation entitlement API validation",
+          "framework": "TestNG",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-11201",
+            "ZEP-11202",
+            "ZEP-11205",
+            "ZEP-11206",
+            "ZEP-11208"
+          ],
+          "manualCount": 5,
+          "status": "Review",
+          "lastResult": "Failed"
+        }
+      ]
+    },
+    {
+      "id": "APP-002",
+      "summary": {
+        "manualBaseline": 388,
+        "automatedManualCases": 260,
+        "manualOnly": 128,
+        "automationTests": 202,
+        "mappedAutomationTests": 185
+      },
+      "mappings": [
+        {
+          "automationId": "LOY-CUC-0084",
+          "name": "Member earns tier credits",
+          "framework": "Cucumber",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-20401",
+            "ZEP-20402",
+            "ZEP-20408"
+          ],
+          "manualCount": 3,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "LOY-CUC-0176",
+          "name": "Tier recalculation and expiry",
+          "framework": "Cucumber",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-20711",
+            "ZEP-20712",
+            "ZEP-20714",
+            "ZEP-20719"
+          ],
+          "manualCount": 4,
+          "status": "Review",
+          "lastResult": "Blocked"
+        }
+      ]
+    },
+    {
+      "id": "APP-003",
+      "summary": {
+        "manualBaseline": 346,
+        "automatedManualCases": 270,
+        "manualOnly": 76,
+        "automationTests": 288,
+        "mappedAutomationTests": 282
+      },
+      "mappings": [
+        {
+          "automationId": "PAY-TNG-0102",
+          "name": "Authorize and capture card payment",
+          "framework": "TestNG",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-30110",
+            "ZEP-30111",
+            "ZEP-30115",
+            "ZEP-30118"
+          ],
+          "manualCount": 4,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "PAY-TNG-0244",
+          "name": "Reverse partial settlement",
+          "framework": "TestNG",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-30671",
+            "ZEP-30672",
+            "ZEP-30674"
+          ],
+          "manualCount": 3,
+          "status": "Review",
+          "lastResult": "Failed"
+        }
+      ]
+    },
+    {
+      "id": "APP-004",
+      "summary": {
+        "manualBaseline": 412,
+        "automatedManualCases": 216,
+        "manualOnly": 196,
+        "automationTests": 260,
+        "mappedAutomationTests": 217
+      },
+      "mappings": [
+        {
+          "automationId": "HOS-UFT-0412",
+          "name": "Create and settle guest folio",
+          "framework": "UFT",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-40201",
+            "ZEP-40203"
+          ],
+          "manualCount": 2,
+          "status": "Legacy",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "HOS-UFT-0528",
+          "name": "Multi-currency folio split",
+          "framework": "UFT",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-40722",
+            "ZEP-40723",
+            "ZEP-40726",
+            "ZEP-40729"
+          ],
+          "manualCount": 4,
+          "status": "Migration planned",
+          "lastResult": "Failed"
+        }
+      ]
+    },
+    {
+      "id": "APP-005",
+      "summary": {
+        "manualBaseline": 276,
+        "automatedManualCases": 196,
+        "manualOnly": 80,
+        "automationTests": 168,
+        "mappedAutomationTests": 161
+      },
+      "mappings": [
+        {
+          "automationId": "ECM-CUC-0068",
+          "name": "Create convention booking",
+          "framework": "Cucumber",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-50214",
+            "ZEP-50215",
+            "ZEP-50218"
+          ],
+          "manualCount": 3,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "ECM-CUC-0119",
+          "name": "Amend event package and pricing",
+          "framework": "Cucumber",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-50531",
+            "ZEP-50533"
+          ],
+          "manualCount": 2,
+          "status": "Current",
+          "lastResult": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "APP-006",
+      "summary": {
+        "manualBaseline": 224,
+        "automatedManualCases": 188,
+        "manualOnly": 36,
+        "automationTests": 192,
+        "mappedAutomationTests": 190
+      },
+      "mappings": [
+        {
+          "automationId": "IAG-TNG-0042",
+          "name": "Issue and refresh access token",
+          "framework": "TestNG",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-60101",
+            "ZEP-60102",
+            "ZEP-60104"
+          ],
+          "manualCount": 3,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "IAG-TNG-0138",
+          "name": "Role-policy authorization matrix",
+          "framework": "TestNG",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-60442",
+            "ZEP-60443",
+            "ZEP-60445",
+            "ZEP-60448"
+          ],
+          "manualCount": 4,
+          "status": "Current",
+          "lastResult": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "APP-007",
+      "summary": {
+        "manualBaseline": 538,
+        "automatedManualCases": 249,
+        "manualOnly": 289,
+        "automationTests": 322,
+        "mappedAutomationTests": 257
+      },
+      "mappings": [
+        {
+          "automationId": "RCC-UFT-0182",
+          "name": "Complete POS sale with card",
+          "framework": "UFT",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-70114",
+            "ZEP-70118"
+          ],
+          "manualCount": 2,
+          "status": "Migration planned",
+          "lastResult": "Failed"
+        },
+        {
+          "automationId": "RCC-UFT-0274",
+          "name": "Apply retail tax override",
+          "framework": "UFT",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-70681",
+            "ZEP-70684",
+            "ZEP-70686"
+          ],
+          "manualCount": 3,
+          "status": "Review",
+          "lastResult": "Failed"
+        }
+      ]
+    },
+    {
+      "id": "APP-008",
+      "summary": {
+        "manualBaseline": 246,
+        "automatedManualCases": 166,
+        "manualOnly": 80,
+        "automationTests": 196,
+        "mappedAutomationTests": 185
+      },
+      "mappings": [
+        {
+          "automationId": "EFP-TNG-0072",
+          "name": "Post balanced journal entry",
+          "framework": "TestNG",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-80106",
+            "ZEP-80107",
+            "ZEP-80109"
+          ],
+          "manualCount": 3,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "EFP-TNG-0144",
+          "name": "Validate period-end accruals",
+          "framework": "TestNG",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-80431",
+            "ZEP-80435"
+          ],
+          "manualCount": 2,
+          "status": "Current",
+          "lastResult": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "APP-009",
+      "summary": {
+        "manualBaseline": 184,
+        "automatedManualCases": 140,
+        "manualOnly": 44,
+        "automationTests": 208,
+        "mappedAutomationTests": 206
+      },
+      "mappings": [
+        {
+          "automationId": "CMP-TNG-0038",
+          "name": "Evaluate critical compliance rule",
+          "framework": "TestNG",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-90112",
+            "ZEP-90113",
+            "ZEP-90114",
+            "ZEP-90115"
+          ],
+          "manualCount": 4,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "CMP-TNG-0162",
+          "name": "Audit rule decision history",
+          "framework": "TestNG",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-90561",
+            "ZEP-90562"
+          ],
+          "manualCount": 2,
+          "status": "Current",
+          "lastResult": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "APP-010",
+      "summary": {
+        "manualBaseline": 299,
+        "automatedManualCases": 197,
+        "manualOnly": 102,
+        "automationTests": 116,
+        "mappedAutomationTests": 105
+      },
+      "mappings": [
+        {
+          "automationId": "DXG-CUC-0048",
+          "name": "Ingest partner transaction feed",
+          "framework": "Cucumber",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-10021",
+            "ZEP-10022",
+            "ZEP-10024"
+          ],
+          "manualCount": 3,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "DXG-TNG-0118",
+          "name": "Detect duplicate partner messages",
+          "framework": "TestNG",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-10374",
+            "ZEP-10375",
+            "ZEP-10379",
+            "ZEP-10382"
+          ],
+          "manualCount": 4,
+          "status": "Review",
+          "lastResult": "Failed"
+        }
+      ]
+    },
+    {
+      "id": "APP-011",
+      "summary": {
+        "manualBaseline": 268,
+        "automatedManualCases": 193,
+        "manualOnly": 75,
+        "automationTests": 174,
+        "mappedAutomationTests": 169
+      },
+      "mappings": [
+        {
+          "automationId": "SCCT-CUC-0061",
+          "name": "Create replenishment order",
+          "framework": "Cucumber",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-11041",
+            "ZEP-11042",
+            "ZEP-11046"
+          ],
+          "manualCount": 3,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "SCCT-CUC-0129",
+          "name": "Resolve supplier allocation exception",
+          "framework": "Cucumber",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-11410",
+            "ZEP-11412"
+          ],
+          "manualCount": 2,
+          "status": "Current",
+          "lastResult": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "APP-012",
+      "summary": {
+        "manualBaseline": 232,
+        "automatedManualCases": 176,
+        "manualOnly": 56,
+        "automationTests": 186,
+        "mappedAutomationTests": 180
+      },
+      "mappings": [
+        {
+          "automationId": "WFO-TNG-0054",
+          "name": "Publish employee work schedule",
+          "framework": "TestNG",
+          "suite": "Smoke",
+          "manualCaseIds": [
+            "ZEP-12013",
+            "ZEP-12014",
+            "ZEP-12018"
+          ],
+          "manualCount": 3,
+          "status": "Current",
+          "lastResult": "Passed"
+        },
+        {
+          "automationId": "WFO-TNG-0131",
+          "name": "Validate overtime policy rules",
+          "framework": "TestNG",
+          "suite": "Regression",
+          "manualCaseIds": [
+            "ZEP-12444",
+            "ZEP-12446",
+            "ZEP-12449"
+          ],
+          "manualCount": 3,
+          "status": "Current",
+          "lastResult": "Passed"
+        }
+      ]
+    }
+  ]
+}

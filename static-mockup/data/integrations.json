@@ -1,0 +1,19 @@
+{
+  "summary":{"healthy":6,"degraded":1,"offline":0,"events24h":18462,"errors24h":27},
+  "integrations":[
+    {"id":"INT-ZEP","name":"Zephyr Cloud","category":"Test management","status":"Degraded","lastSync":"9 min ago","records":"14,286 cases","latency":"1.8s","events":3264,"errors":19,"detail":"Execution sync delayed; case catalog current"},
+    {"id":"INT-JIRA","name":"Jira Cloud","category":"Work management","status":"Healthy","lastSync":"2 min ago","records":"8,942 issues","latency":"420ms","events":1840,"errors":2,"detail":"Issues, worklogs and blockers current"},
+    {"id":"INT-GHA","name":"GitHub Actions","category":"CI execution","status":"Healthy","lastSync":"Live","records":"38 workflows","latency":"310ms","events":4920,"errors":1,"detail":"Webhook delivery healthy"},
+    {"id":"INT-ADO","name":"Azure DevOps","category":"CI execution","status":"Healthy","lastSync":"Live","records":"54 pipelines","latency":"580ms","events":7142,"errors":3,"detail":"UFT and SandsARC pipelines available"},
+    {"id":"INT-BLOB","name":"Azure Blob Storage","category":"Artifacts","status":"Healthy","lastSync":"Live","records":"2.8 TB","latency":"92ms","events":684,"errors":0,"detail":"Retention and lifecycle policy active"},
+    {"id":"INT-MAIL","name":"Email notifications","category":"Communication","status":"Healthy","lastSync":"6 min ago","records":"286 sent today","latency":"740ms","events":286,"errors":2,"detail":"98.9% accepted delivery"},
+    {"id":"INT-AI","name":"AI insight service","category":"Intelligence","status":"Healthy","lastSync":"14 min ago","records":"42 summaries","latency":"3.2s","events":326,"errors":0,"detail":"Evidence validation enabled"}
+  ],
+  "activity":[
+    {"time":"09:42","source":"Zephyr","event":"Execution sync partially retried","status":"Warning","correlation":"QA-INT-84219"},
+    {"time":"09:39","source":"GitHub Actions","event":"RUN-26841 moved to Running","status":"Success","correlation":"ghd-890184"},
+    {"time":"09:31","source":"Jira","event":"64 issue and 18 worklog updates","status":"Success","correlation":"jira-593021"},
+    {"time":"09:12","source":"Azure DevOps","event":"RUN-26840 results ingested","status":"Success","correlation":"ado-821735"},
+    {"time":"08:58","source":"Email","event":"Loyalty blocker digest accepted","status":"Success","correlation":"mail-291847"}
+  ]
+}

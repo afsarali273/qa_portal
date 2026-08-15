@@ -1,0 +1,35 @@
+{
+  "catalog":{"applications":128,"pipelines":214,"scheduled":78,"favorites":6,"page":1,"pageSize":6},
+  "definitions":[
+    {"id":"TD-101","name":"Guest Experience smoke","application":"Guest Experience Platform","framework":"SandsARC Cucumber","provider":"GitHub Actions","environment":"QA-2","tests":250,"duration":"18 min","lastResult":"Passed","tags":["smoke","critical"]},
+    {"id":"TD-102","name":"Payments API regression","application":"Payments Hub","framework":"SandsARC TestNG","provider":"Azure DevOps","environment":"SIT","tests":684,"duration":"42 min","lastResult":"Passed","tags":["api","regression"]},
+    {"id":"TD-103","name":"Hotel operations nightly","application":"Hotel Operations Suite","framework":"UFT","provider":"Azure DevOps","environment":"UAT","tests":412,"duration":"2 hr 16 min","lastResult":"Failed","tags":["legacy","nightly"]},
+    {"id":"TD-104","name":"Loyalty member journeys","application":"Loyalty & Rewards","framework":"SandsARC Cucumber","provider":"GitHub Actions","environment":"QA-1","tests":318,"duration":"36 min","lastResult":"Blocked","tags":["journey","regression"]},
+    {"id":"TD-105","name":"Retail POS regression","application":"Retail Commerce Cloud","framework":"UFT","provider":"Azure DevOps","environment":"SIT","tests":562,"duration":"3 hr 05 min","lastResult":"Failed","tags":["legacy","pos"]},
+    {"id":"TD-106","name":"Compliance rules pack","application":"Compliance Services","framework":"SandsARC TestNG","provider":"Azure DevOps","environment":"QA-2","tests":906,"duration":"51 min","lastResult":"Passed","tags":["rules","critical"]}
+  ],
+  "schedules":[
+    {"definitionId":"TD-101","cadence":"Weekdays · 07:30","nextRun":"Mon 17 Aug · 07:30","branch":"release/2026.08","enabled":true},
+    {"definitionId":"TD-102","cadence":"Daily · 05:00","nextRun":"Sun 16 Aug · 05:00","branch":"main","enabled":true},
+    {"definitionId":"TD-103","cadence":"Nightly · 01:00","nextRun":"Sun 16 Aug · 01:00","branch":"legacy-main","enabled":true},
+    {"definitionId":"TD-104","cadence":"Mon, Wed, Fri · 06:00","nextRun":"Mon 17 Aug · 06:00","branch":"release/R26.8","enabled":true},
+    {"definitionId":"TD-105","cadence":"Nightly · 02:00","nextRun":"Paused","branch":"legacy-main","enabled":false},
+    {"definitionId":"TD-106","cadence":"Daily · 04:30","nextRun":"Sun 16 Aug · 04:30","branch":"release/3.9.2","enabled":true}
+  ],
+  "applicationInsights":[
+    {"application":"Guest Experience Platform","team":"MBS","runs30d":48,"passRate":97.9,"flakiness":1.2,"failedRuns":1,"avgDuration":"18m","labels":["Jul 06","Jul 13","Jul 20","Jul 27","Aug 03","Aug 10"],"trend":[94.8,96.1,95.7,97.2,98.3,97.9]},
+    {"application":"Payments Hub","team":"MBS","runs30d":62,"passRate":98.1,"flakiness":0.8,"failedRuns":1,"avgDuration":"41m","labels":["Jul 06","Jul 13","Jul 20","Jul 27","Aug 03","Aug 10"],"trend":[96.2,97.1,97.8,98.4,97.6,98.1]},
+    {"application":"Hotel Operations Suite","team":"MBS","runs30d":30,"passRate":88.4,"flakiness":6.7,"failedRuns":5,"avgDuration":"2h 14m","labels":["Jul 06","Jul 13","Jul 20","Jul 27","Aug 03","Aug 10"],"trend":[92.1,90.4,91.2,87.9,89.6,88.4]},
+    {"application":"Loyalty & Rewards","team":"MBS","runs30d":42,"passRate":92.6,"flakiness":3.9,"failedRuns":3,"avgDuration":"35m","labels":["Jul 06","Jul 13","Jul 20","Jul 27","Aug 03","Aug 10"],"trend":[94.2,93.1,91.8,94.6,93.4,92.6]},
+    {"application":"Retail Commerce Cloud","team":"SCL","runs30d":28,"passRate":84.2,"flakiness":9.4,"failedRuns":7,"avgDuration":"2h 58m","labels":["Jul 06","Jul 13","Jul 20","Jul 27","Aug 03","Aug 10"],"trend":[90.3,88.7,86.1,87.4,82.9,84.2]},
+    {"application":"Compliance Services","team":"SCL","runs30d":54,"passRate":99.1,"flakiness":0.4,"failedRuns":0,"avgDuration":"50m","labels":["Jul 06","Jul 13","Jul 20","Jul 27","Aug 03","Aug 10"],"trend":[98.4,98.7,99.0,98.8,99.3,99.1]}
+  ],
+  "runs":[
+    {"id":"RUN-26841","definition":"Guest Experience smoke","application":"Guest Experience Platform","framework":"SandsARC Cucumber","provider":"GitHub Actions","branch":"release/2026.08","environment":"QA-2","status":"Running","progress":68,"result":"—","passed":168,"failed":2,"duration":"12m 44s","startedBy":"Afsar Ali","started":"09:29"},
+    {"id":"RUN-26840","definition":"Payments API regression","application":"Payments Hub","framework":"SandsARC TestNG","provider":"Azure DevOps","branch":"main","environment":"SIT","status":"Completed","progress":100,"result":"Passed","passed":679,"failed":5,"duration":"41m 18s","startedBy":"Neha Rao","started":"08:44"},
+    {"id":"RUN-26839","definition":"Hotel operations nightly","application":"Hotel Operations Suite","framework":"UFT","provider":"Azure DevOps","branch":"legacy-main","environment":"UAT","status":"Completed","progress":100,"result":"Failed","passed":389,"failed":23,"duration":"2h 12m","startedBy":"Schedule","started":"06:00"},
+    {"id":"RUN-26838","definition":"Compliance rules pack","application":"Compliance Services","framework":"SandsARC TestNG","provider":"Azure DevOps","branch":"release/3.9.2","environment":"QA-2","status":"Completed","progress":100,"result":"Passed","passed":904,"failed":2,"duration":"49m 52s","startedBy":"Priya Nair","started":"05:12"},
+    {"id":"RUN-26837","definition":"Loyalty member journeys","application":"Loyalty & Rewards","framework":"SandsARC Cucumber","provider":"GitHub Actions","branch":"release/R26.8","environment":"QA-1","status":"Blocked","progress":42,"result":"Blocked","passed":124,"failed":0,"duration":"18m 03s","startedBy":"Daniel Koh","started":"04:38"},
+    {"id":"RUN-26836","definition":"Retail POS regression","application":"Retail Commerce Cloud","framework":"UFT","provider":"Azure DevOps","branch":"legacy-main","environment":"SIT","status":"Cancelled","progress":31,"result":"Cancelled","passed":162,"failed":11,"duration":"54m 26s","startedBy":"Alicia Ho","started":"03:15"}
+  ]
+}

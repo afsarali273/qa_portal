@@ -1,0 +1,17 @@
+{
+  "metrics":[{"label":"Active Zephyr cycles","value":"18","detail":"11 MBS · 7 SCL"},{"label":"Planned cases","value":"3,428","detail":"82% executed"},{"label":"Manual pass rate","value":"94.7%","detail":"+1.8% this month"},{"label":"Blocked cases","value":"64","detail":"17 need cross-team help"}],
+  "cycles":[
+    {"id":"ZC-2608-14","name":"Loyalty R26.8 regression","application":"Loyalty & Rewards","team":"MBS","owner":"Chloe Ng","progress":76,"planned":462,"passed":326,"failed":18,"blocked":12,"notExecuted":106,"end":"19 Aug","status":"At risk"},
+    {"id":"ZC-2608-12","name":"GXP August release","application":"Guest Experience Platform","team":"MBS","owner":"Harish Iyer","progress":93,"planned":318,"passed":287,"failed":7,"blocked":2,"notExecuted":22,"end":"16 Aug","status":"On track"},
+    {"id":"ZC-2608-09","name":"Retail POS 26.08 UAT","application":"Retail Commerce Cloud","team":"SCL","owner":"Mei Lin","progress":61,"planned":538,"passed":292,"failed":21,"blocked":16,"notExecuted":209,"end":"21 Aug","status":"Blocked"},
+    {"id":"ZC-2608-07","name":"Finance 11.6 verification","application":"Enterprise Finance Platform","team":"SCL","owner":"Farah Aziz","progress":88,"planned":246,"passed":207,"failed":6,"blocked":3,"notExecuted":30,"end":"18 Aug","status":"On track"},
+    {"id":"ZC-2608-04","name":"Compliance 3.9.2 release","application":"Compliance Services","team":"SCL","owner":"Jon Tan","progress":96,"planned":184,"passed":174,"failed":3,"blocked":0,"notExecuted":7,"end":"15 Aug","status":"On track"}
+  ],
+  "blockers":[
+    {"id":"QA-8421","summary":"Loyalty tier test accounts missing historical activity","application":"Loyalty & Rewards","type":"Test data","age":"3d","owner":"Chloe Ng","help":"Data Engineering"},
+    {"id":"QA-8412","summary":"Retail SIT payment terminal intermittently offline","application":"Retail Commerce Cloud","type":"Environment","age":"5d","owner":"Mei Lin","help":"Platform Ops"},
+    {"id":"QA-8398","summary":"Hotel folio currency rates not refreshed","application":"Hotel Operations Suite","type":"Test data","age":"2d","owner":"Adrian Teo","help":"Finance Systems"},
+    {"id":"QA-8382","summary":"Partner feed certificate expired in QA","application":"Data Exchange Gateway","type":"Dependency","age":"1d","owner":"Lina Zhou","help":"Integration Team"}
+  ],
+  "effort":{"labels":["Test design","Execution","Defect verification","Test data","Release support"],"hours":[286,612,144,118,92]}
+}

@@ -1,0 +1,26 @@
+{
+  "metrics":[
+    {"label":"Manual test baseline","value":"2,843","delta":"100%","detail":"Zephyr cases in automation scope","tone":"purple"},
+    {"label":"Manual cases automated","value":"1,842","delta":"64.8%","detail":"Distinct manual cases with automation","tone":"gold"},
+    {"label":"Manual-only remainder","value":"1,001","delta":"35.2%","detail":"Automation backlog","tone":"teal"},
+    {"label":"Mapping completeness","value":"92.7%","delta":"+3.6%","detail":"Automation tests linked to Zephyr","tone":"green"}
+  ],
+  "byApplication":[
+    {"id":"APP-001","application":"Guest Experience Platform","team":"MBS","manualBaseline":430,"automatedManualCases":344,"manualOnlyCases":86,"automationCoverage":80.0,"automationTests":250,"smokeTests":52,"regressionTests":198,"mappingRate":96.4},
+    {"id":"APP-002","application":"Loyalty & Rewards","team":"MBS","manualBaseline":388,"automatedManualCases":260,"manualOnlyCases":128,"automationCoverage":67.0,"automationTests":202,"smokeTests":38,"regressionTests":164,"mappingRate":91.6},
+    {"id":"APP-003","application":"Payments Hub","team":"MBS","manualBaseline":346,"automatedManualCases":270,"manualOnlyCases":76,"automationCoverage":78.0,"automationTests":288,"smokeTests":64,"regressionTests":224,"mappingRate":98.1},
+    {"id":"APP-004","application":"Hotel Operations Suite","team":"MBS","manualBaseline":412,"automatedManualCases":216,"manualOnlyCases":196,"automationCoverage":52.4,"automationTests":260,"smokeTests":42,"regressionTests":218,"mappingRate":83.5},
+    {"id":"APP-007","application":"Retail Commerce Cloud","team":"SCL","manualBaseline":538,"automatedManualCases":249,"manualOnlyCases":289,"automationCoverage":46.3,"automationTests":322,"smokeTests":48,"regressionTests":274,"mappingRate":79.8},
+    {"id":"APP-008","application":"Enterprise Finance Platform","team":"SCL","manualBaseline":246,"automatedManualCases":166,"manualOnlyCases":80,"automationCoverage":67.5,"automationTests":196,"smokeTests":36,"regressionTests":160,"mappingRate":94.2},
+    {"id":"APP-009","application":"Compliance Services","team":"SCL","manualBaseline":184,"automatedManualCases":140,"manualOnlyCases":44,"automationCoverage":76.1,"automationTests":208,"smokeTests":44,"regressionTests":164,"mappingRate":99.0},
+    {"id":"APP-010","application":"Data Exchange Gateway","team":"SCL","manualBaseline":299,"automatedManualCases":197,"manualOnlyCases":102,"automationCoverage":65.9,"automationTests":116,"smokeTests":22,"regressionTests":94,"mappingRate":90.5}
+  ],
+  "automationBacklog":[
+    {"id":"ZEP-4821","manualScope":"Refund reversal after partial settlement","application":"Payments Hub","priority":"Critical","manualCases":8,"owner":"Neha Rao"},
+    {"id":"ZEP-3108","manualScope":"Offline loyalty tier recalculation","application":"Loyalty & Rewards","priority":"High","manualCases":12,"owner":"Daniel Koh"},
+    {"id":"ZEP-6927","manualScope":"Retail tax override audit trail","application":"Retail Commerce Cloud","priority":"Critical","manualCases":16,"owner":"Alicia Ho"},
+    {"id":"ZEP-7152","manualScope":"Guest folio multi-currency split","application":"Hotel Operations Suite","priority":"High","manualCases":9,"owner":"Marcus Lee"},
+    {"id":"ZEP-8911","manualScope":"Partner feed duplicate detection","application":"Data Exchange Gateway","priority":"Medium","manualCases":6,"owner":"Ryan Chua"}
+  ],
+  "trend":{"labels":["Mar","Apr","May","Jun","Jul","Aug"],"automation":[48,51,55,57,61,64.8],"manualOnly":[52,49,45,43,39,35.2]}
+}

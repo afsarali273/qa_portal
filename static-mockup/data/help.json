@@ -1,0 +1,343 @@
+{
+  "notice": {
+    "title": "Prototype transparency",
+    "text": "This mockup currently reads static JSON files. In the production portal, every metric and AI-assisted answer will identify its connected source, selected scope, calculation version and last successful refresh."
+  },
+  "principles": [
+    {
+      "icon": "database-zap",
+      "title": "Source first",
+      "text": "Every number names its authoritative source and shows when that source was last refreshed."
+    },
+    {
+      "icon": "calculator",
+      "title": "Calculation visible",
+      "text": "Definitions, formulas, exclusions and active filters are available beside the metric."
+    },
+    {
+      "icon": "sparkles",
+      "title": "Evidence-linked AI",
+      "text": "AI explains approved portal data and cites the records used; it does not invent missing results."
+    },
+    {
+      "icon": "users-round",
+      "title": "Project insight only",
+      "text": "Signals support teams and delivery planning. They are never individual performance scores."
+    }
+  ],
+  "metrics": [
+    {
+      "icon": "clipboard-list",
+      "category": "Coverage",
+      "name": "Manual test baseline",
+      "definition": "The distinct active manual test cases in Zephyr for the selected team, application and period. For this portal, the manual baseline represents 100% of the agreed test requirement coverage.",
+      "formula": "Count of distinct active Zephyr manual test cases",
+      "source": "Zephyr",
+      "exclusions": "Draft, archived and out-of-scope cases"
+    },
+    {
+      "icon": "link-2",
+      "category": "Coverage",
+      "name": "Automated manual cases",
+      "definition": "Distinct manual cases linked in Zephyr to at least one active automation test. One automation test may cover several manual cases; each manual case is counted once.",
+      "formula": "Distinct manual case IDs with an active automation link",
+      "source": "Zephyr",
+      "exclusions": "Broken, retired or inactive mappings"
+    },
+    {
+      "icon": "chart-no-axes-column-increasing",
+      "category": "Coverage",
+      "name": "Automation coverage",
+      "definition": "The share of the manual test baseline that has a valid automation mapping in Zephyr.",
+      "formula": "Automated manual cases ÷ manual test baseline × 100",
+      "source": "Zephyr",
+      "exclusions": "Manual cases outside the active baseline"
+    },
+    {
+      "icon": "hand",
+      "category": "Coverage",
+      "name": "Manual-only percentage",
+      "definition": "The portion of the manual baseline that does not yet have a valid automation mapping.",
+      "formula": "(Manual baseline − automated manual cases) ÷ manual baseline × 100",
+      "source": "Zephyr",
+      "exclusions": "Archived cases and invalid mappings"
+    },
+    {
+      "icon": "flame",
+      "category": "Coverage",
+      "name": "Smoke test percentage",
+      "definition": "The share of active automation tests classified as smoke. Other automated tests are treated as regression unless explicitly excluded.",
+      "formula": "Active smoke automation tests ÷ active automation tests × 100",
+      "source": "Zephyr + framework tags",
+      "exclusions": "Inactive and utility-only tests"
+    },
+    {
+      "icon": "circle-check-big",
+      "category": "Execution",
+      "name": "Pass rate",
+      "definition": "Successful completed automated executions in the selected period. The portal keeps first-run pass rate separate from final pass rate after retries.",
+      "formula": "Passed completed executions ÷ all completed executions × 100",
+      "source": "GitHub Actions / Azure DevOps",
+      "exclusions": "Cancelled and still-running executions"
+    },
+    {
+      "icon": "shuffle",
+      "category": "Execution",
+      "name": "Flaky execution rate",
+      "definition": "The percentage of executed tests whose outcome changes across retries or comparable recent runs. The configured detection rule and period will be shown with the metric.",
+      "formula": "Tests meeting the flakiness rule ÷ executed automated tests × 100",
+      "source": "Normalized CI results in portal database",
+      "exclusions": "Known environment outages and manually cancelled runs"
+    },
+    {
+      "icon": "octagon-alert",
+      "category": "Delivery",
+      "name": "Open blockers",
+      "definition": "Unresolved Jira QA blockers and blocked Zephyr cycles in the selected scope. Linked records are deduplicated.",
+      "formula": "Distinct unresolved blocker records",
+      "source": "Jira + Zephyr",
+      "exclusions": "Resolved, cancelled and duplicate blockers"
+    },
+    {
+      "icon": "timer-reset",
+      "category": "Value",
+      "name": "Manual time saved estimate",
+      "definition": "An estimate of manual execution time avoided by successful automation runs. It is a project planning estimate, not a measure of individual productivity.",
+      "formula": "Successful automated executions × approved manual duration estimate",
+      "source": "Zephyr estimates + CI results",
+      "exclusions": "Failed runs, setup time and unapproved estimates"
+    },
+    {
+      "icon": "route",
+      "category": "Modernization",
+      "name": "UFT migration completion",
+      "definition": "Progress moving the identified UFT inventory to SandsARC, with migrated tests counted only after validation or approved retirement.",
+      "formula": "(Validated + retired cases) ÷ identified UFT migration scope × 100",
+      "source": "Zephyr + Azure DevOps + portal configuration",
+      "exclusions": "New SandsARC-only tests outside migration scope"
+    },
+    {
+      "icon": "play-circle",
+      "category": "Execution",
+      "name": "Runs in period",
+      "definition": "Accepted workflow and pipeline run records, whether launched from this portal or scheduled directly in GitHub Actions or Azure DevOps.",
+      "formula": "Count of unique normalized run IDs in the selected period",
+      "source": "GitHub Actions + Azure DevOps",
+      "exclusions": "Duplicate webhook events and rejected test records"
+    },
+    {
+      "icon": "badge-check",
+      "category": "Delivery",
+      "name": "Release readiness",
+      "definition": "A transparent project-level status based on agreed QA exit criteria, test completion and unresolved blockers. It is not an AI-generated score or an employee KPI.",
+      "formula": "Ready, At risk or Blocked using the displayed project rules",
+      "source": "Zephyr + Jira + portal release configuration",
+      "exclusions": "Unapproved or future release scope"
+    },
+    {
+      "icon": "pie-chart",
+      "category": "Effort",
+      "name": "QA effort by activity",
+      "definition": "Jira worklogs and estimates grouped by team, project and activity such as planning, execution, automation and defect support.",
+      "formula": "Sum of approved effort records by activity",
+      "source": "Jira",
+      "exclusions": "Personal ranking, utilization scoring and non-QA work"
+    },
+    {
+      "icon": "life-buoy",
+      "category": "Effort",
+      "name": "Capacity support signal",
+      "definition": "A coordination view of open work, remaining estimates and blockers that helps identify where assistance or rebalancing may be useful.",
+      "formula": "Displayed inputs only; no composite performance score",
+      "source": "Jira",
+      "exclusions": "Performance ratings, productivity rankings and hidden scoring"
+    }
+  ],
+  "sources": [
+    {
+      "icon": "list-checks",
+      "name": "Zephyr",
+      "role": "Test inventory and traceability source of truth",
+      "data": ["Manual and automation test cases", "Cycles and execution status", "Manual-to-automation mappings", "Suites, tags and estimates"],
+      "method": "API plus scheduled reconciliation",
+      "freshness": "Planned: every 15 minutes"
+    },
+    {
+      "icon": "blocks",
+      "name": "Jira",
+      "role": "Work, release and blocker source of truth",
+      "data": ["QA issues and blockers", "Projects, releases and sprints", "Estimates and worklogs", "Assignees for support coordination"],
+      "method": "API plus webhook updates",
+      "freshness": "Planned: near real-time"
+    },
+    {
+      "icon": "github",
+      "name": "GitHub Actions",
+      "role": "GitHub automation execution source",
+      "data": ["Workflow, job and run status", "Conclusions and duration", "Scheduled workflow metadata", "Test result artifacts"],
+      "method": "Webhooks plus reconciliation",
+      "freshness": "Planned: near real-time"
+    },
+    {
+      "icon": "workflow",
+      "name": "Azure DevOps",
+      "role": "ADO pipeline execution source",
+      "data": ["Pipeline definitions and schedules", "UFT and SandsARC runs", "Stages, jobs and outcomes", "Published test results and artifacts"],
+      "method": "Service hooks plus API",
+      "freshness": "Planned: near real-time"
+    },
+    {
+      "icon": "git-branch",
+      "name": "GitHub",
+      "role": "Repository and framework reference",
+      "data": ["Repository and branch references", "Tags and commit identifiers", "Workflow location", "Framework metadata"],
+      "method": "Read-only GitHub API",
+      "freshness": "Planned: on change and daily check"
+    },
+    {
+      "icon": "database",
+      "name": "Portal database",
+      "role": "Normalized history and portal-owned information",
+      "data": ["Applications, teams and source IDs", "Normalized execution results", "Metric snapshots and sync checkpoints", "Run requests, settings and AI evidence metadata"],
+      "method": "Written by approved portal services",
+      "freshness": "Shown per dataset"
+    }
+  ],
+  "lineage": [
+    {
+      "icon": "cloud",
+      "title": "Source systems",
+      "text": "Zephyr, Jira, GitHub, GitHub Actions and Azure DevOps"
+    },
+    {
+      "icon": "webhook",
+      "title": "Connectors",
+      "text": "Read-only APIs, webhooks, service hooks and scheduled reconciliation"
+    },
+    {
+      "icon": "list-checks",
+      "title": "Validation",
+      "text": "Schema checks, identity mapping, deduplication and quality rules"
+    },
+    {
+      "icon": "database",
+      "title": "Portal database",
+      "text": "Normalized results, source references, configuration and trend snapshots"
+    },
+    {
+      "icon": "calculator",
+      "title": "Metric service",
+      "text": "Versioned formulas apply the selected team, application and period"
+    },
+    {
+      "icon": "layout-dashboard",
+      "title": "Portal and AI",
+      "text": "Dashboards display the metric; AI explains it with the same evidence"
+    }
+  ],
+  "database": {
+    "stored": [
+      "Application and team catalog with external source identifiers",
+      "Normalized execution results and links to CI artifacts",
+      "Versioned metric snapshots used for weekly, monthly and yearly trends",
+      "Portal run requests, approved schedules, favorites and notification status",
+      "Connector sync health, checkpoints, validation errors and correlation IDs",
+      "AI question context, evidence references, citations and audit metadata"
+    ],
+    "notStored": [
+      "Integration credentials or secrets in readable form",
+      "GitHub repository source code",
+      "Private email bodies unrelated to portal notifications",
+      "Individual performance ratings, rankings or hidden productivity scores"
+    ]
+  },
+  "ai": {
+    "steps": [
+      {
+        "title": "Understand the question",
+        "text": "The portal includes the current page, selected team, application, period and referenced metric."
+      },
+      {
+        "title": "Choose approved data",
+        "text": "The AI uses read-only portal tools that expose only permitted metrics and source-linked records."
+      },
+      {
+        "title": "Retrieve evidence",
+        "text": "It retrieves calculated metrics and the supporting Zephyr, Jira or CI references from the portal database."
+      },
+      {
+        "title": "Explain, not recalculate",
+        "text": "The model summarizes, compares and highlights patterns; authoritative calculations remain in the versioned metric service."
+      },
+      {
+        "title": "Show the trail",
+        "text": "The answer displays citations, freshness, active filters, assumptions and any missing or delayed data."
+      }
+    ],
+    "can": [
+      "Explain a metric in plain language",
+      "Compare applications, teams or periods",
+      "Summarize release risks and test results",
+      "Highlight anomalies and suggest the next investigation",
+      "Draft a test-run configuration for human review"
+    ],
+    "cannot": [
+      "Invent or silently fill missing source data",
+      "Change metric definitions or override source results",
+      "Rank people or infer individual performance",
+      "Trigger a pipeline, send email or update Jira without confirmation",
+      "Bypass portal access rules or reveal secrets"
+    ],
+    "example": {
+      "question": "Why did automation coverage rise this month?",
+      "evidence": "Coverage snapshots, Zephyr mapping changes, selected team and date range",
+      "calculation": "The metric service compares distinct automated manual cases against the manual baseline",
+      "answer": "AI explains the cases added or removed, links to the relevant mappings and states any sync delay"
+    }
+  },
+  "governance": [
+    {
+      "icon": "eye",
+      "title": "Initial visibility",
+      "text": "During the initial phase everyone can view every section. The planned model has All QA access and Management access."
+    },
+    {
+      "icon": "shield-check",
+      "title": "Responsible use",
+      "text": "Metrics describe projects and QA teams. Individual Jira details are used only to coordinate support and capacity."
+    },
+    {
+      "icon": "clock-3",
+      "title": "Freshness and ownership",
+      "text": "Production views will show last successful refresh, source owner, metric owner and calculation version."
+    },
+    {
+      "icon": "message-square-warning",
+      "title": "Corrections",
+      "text": "Users will be able to report a questionable metric, see validation issues and follow the correction status."
+    }
+  ],
+  "glossary": [
+    {"term": "ADO", "meaning": "Azure DevOps, the Microsoft platform used here for pipelines and some legacy UFT execution."},
+    {"term": "Artifact", "meaning": "A report, log, screenshot or other output produced by a pipeline run."},
+    {"term": "Automation mapping", "meaning": "A Zephyr link showing which manual cases are covered by an automation test."},
+    {"term": "Blocker", "meaning": "An unresolved condition preventing planned testing or delivery progress."},
+    {"term": "Cucumber", "meaning": "A behavior-driven testing style supported by SandsARC using feature files and scenarios."},
+    {"term": "Data freshness", "meaning": "The time the portal last received and successfully processed the source data."},
+    {"term": "Final pass rate", "meaning": "Pass rate after permitted retries have completed."},
+    {"term": "First-run pass rate", "meaning": "Pass rate before retries; useful for revealing instability hidden by reruns."},
+    {"term": "Flaky test", "meaning": "A test that changes outcome without a relevant product change under comparable conditions."},
+    {"term": "GitHub Actions", "meaning": "GitHub's workflow automation service used to execute approved test pipelines."},
+    {"term": "Jira", "meaning": "The source for QA work items, blockers, releases, estimates and coordination signals."},
+    {"term": "Manual baseline", "meaning": "The active Zephyr manual test inventory used as the denominator for automation coverage."},
+    {"term": "Metric snapshot", "meaning": "A stored, time-stamped metric value and its scope used to build historical trends."},
+    {"term": "Regression test", "meaning": "An automated test outside the smoke subset that checks existing behavior remains correct."},
+    {"term": "Run", "meaning": "One accepted execution of a GitHub Actions workflow or Azure DevOps pipeline."},
+    {"term": "SandsARC", "meaning": "The company's Java-based automation framework supporting Cucumber and TestNG."},
+    {"term": "Smoke test", "meaning": "A small, fast automation subset that checks critical functionality before deeper regression."},
+    {"term": "Source of truth", "meaning": "The authoritative system where a fact is owned and corrected."},
+    {"term": "TestNG", "meaning": "A Java test framework supported within SandsARC."},
+    {"term": "UFT", "meaning": "The legacy automation framework being migrated to SandsARC."},
+    {"term": "Zephyr", "meaning": "The source of truth for manual and automation test inventory, cycles and mappings."}
+  ]
+}

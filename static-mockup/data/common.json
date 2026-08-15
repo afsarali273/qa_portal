@@ -1,0 +1,11 @@
+{
+  "generatedAt":"2026-08-15T09:42:00+08:00",
+  "user":{"name":"Afsar Ali","initials":"AA","role":"QA Platform"},
+  "teams":[{"id":"all","name":"All teams"},{"id":"mbs","name":"MBS"},{"id":"scl","name":"SCL"}],
+  "applications":["Guest Experience Platform","Loyalty & Rewards","Payments Hub","Hotel Operations Suite","Event & Convention Manager","Identity & Access Gateway","Retail Commerce Cloud","Enterprise Finance Platform","Compliance Services","Data Exchange Gateway","Supply Chain Control Tower","Workforce Operations"],
+  "notifications":[
+    {"id":"N-301","level":"warning","title":"Loyalty regression at risk","detail":"12 blocked cases require test data","time":"8 min"},
+    {"id":"N-302","level":"success","title":"UFT migration validated","detail":"Payments Hub batch 14 passed","time":"24 min"},
+    {"id":"N-303","level":"info","title":"SandsARC run completed","detail":"Guest Experience smoke suite: 248/250 passed","time":"41 min"}
+  ]
+}
