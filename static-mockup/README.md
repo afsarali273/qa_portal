@@ -2,6 +2,12 @@
 
 This folder is a standalone, light-theme HTML prototype for the Central QA Portal. It is deliberately separate from the future Next.js implementation and uses only static JSON data.
 
+## Static deployment
+
+The complete mockup can be hosted directly by GitHub Pages or any ordinary static web server. It has no build step, backend runtime, database connection or server-side routing requirement. All application links and data requests are relative, so the site works from a project subpath such as `/qa_portal/`.
+
+The deployment workflow validates every local page, asset, JavaScript module and JSON file before publishing `static-mockup/`. GitHub Pages is also instructed to serve the files without Jekyll processing.
+
 ## Preview
 
 Run a local web server from this directory because JSON cannot be loaded reliably through `file://`:
@@ -24,6 +30,7 @@ Then open `http://127.0.0.1:4173/`.
 - `automation.html` — SandsARC adoption, UFT migration and reliability
 - `management.html` — project progress, team capacity and AI briefing
 - `integrations.html` — Zephyr, Jira, GitHub Actions and Azure health
+- `help.html` — metric definitions, source lineage, AI transparency and terminology
 - `404.html` and `error.html` — product states
 
 ## Prototype behavior
