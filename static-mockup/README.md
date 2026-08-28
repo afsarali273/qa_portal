@@ -4,13 +4,15 @@ This folder is a standalone, light-theme HTML prototype for the Central QA Porta
 
 ## Static deployment
 
-The complete mockup can be hosted directly by GitHub Pages or any ordinary static web server. It has no build step, backend runtime, database connection or server-side routing requirement. All application links and data requests are relative, so the site works from a project subpath such as `/qa_portal/`.
+The complete mockup can be hosted directly by GitHub Pages or any ordinary static web server. It has no backend runtime, database connection or server-side routing requirement. All application links and data requests are relative, so the site works from a project subpath such as `/qa_portal/`.
+
+The committed `assets/app.static.js` bundle also embeds the mock JSON data, allowing `index.html` and the other pages to be opened directly through `file://` without starting a server. The files in `data/` remain the editable source of truth.
 
 The deployment workflow validates every local page, asset, JavaScript module and JSON file before publishing `static-mockup/`. GitHub Pages is also instructed to serve the files without Jekyll processing.
 
 ## Preview
 
-Run a local web server from this directory because JSON cannot be loaded reliably through `file://`:
+You can double-click `index.html` for a direct offline preview. For development, a local server remains useful:
 
 ```bash
 cd static-mockup
@@ -38,3 +40,9 @@ Then open `http://127.0.0.1:4173/`.
 Search, filters, cards, status chips, tables, charts and modals are interactive. Triggering, exporting, AI generation, connector tests and notification actions are simulations only; no external service is called.
 
 All data lives in `data/*.json`. Manual-to-automation mappings are modeled as read-only relationships derived from links maintained in Zephyr. Named Jira workload examples are strictly for capacity and support coordination—not individual scoring or performance management.
+
+After changing JavaScript or JSON, regenerate the direct-open bundle from the repository root:
+
+```bash
+python3 scripts/build_static_bundle.py
+```

@@ -12,7 +12,7 @@ try {
   bindInteractions();window.qaTheme?.bind();drawPageCharts();await hydrateIcons();
 } catch(error){renderError(error)}
 
-async function getJSON(name){const r=await fetch(`data/${name}.json`);if(!r.ok)throw new Error(`Unable to load ${name} data`);return r.json()}
+async function getJSON(name){const embedded=globalThis.QA_STATIC_DATA?.[name];if(embedded)return embedded;const r=await fetch(`data/${name}.json`);if(!r.ok)throw new Error(`Unable to load ${name} data`);return r.json()}
 
 function enhanceOverview(d){
  const grid=document.querySelector('#metric-grid');if(grid)grid.innerHTML=d.metrics.map(m=>`<article class="metric-card" style="--metric-color:${m.color};--metric-tint:${m.tint}"><div class="metric-top"><div class="metric-icon">${icon(m.icon)}</div><span class="trend ${m.direction}">${m.trend}</span></div><div class="metric-label">${m.label}</div><div class="metric-value">${m.value}</div><div class="metric-bottom">${m.context}</div></article>`).join('');

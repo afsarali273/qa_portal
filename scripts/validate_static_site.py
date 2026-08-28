@@ -47,8 +47,14 @@ def validate_html(errors: list[str]) -> None:
         return
 
     for page in pages:
+        page_text = page.read_text(encoding="utf-8")
+        if 'type="module"' in page_text:
+            errors.append(
+                f"{page.relative_to(ROOT)} uses an ES module script, which cannot "
+                "run reliably through file://"
+            )
         parser = AssetParser()
-        parser.feed(page.read_text(encoding="utf-8"))
+        parser.feed(page_text)
         for reference in parser.references:
             try:
                 target = local_target(page, reference)
@@ -90,6 +96,11 @@ def main() -> int:
     validate_html(errors)
     validate_javascript(errors)
     validate_json(errors)
+    offline_bundle = ROOT / "assets" / "app.static.js"
+    if not offline_bundle.is_file():
+        errors.append("Missing assets/app.static.js offline bundle")
+    elif "globalThis.QA_STATIC_DATA=" not in offline_bundle.read_text(encoding="utf-8"):
+        errors.append("Offline bundle does not contain embedded mock data")
     if errors:
         print("Static-site validation failed:", file=sys.stderr)
         for error in errors:
